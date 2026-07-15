@@ -1,9 +1,9 @@
 import express from "express";
-import { getAllContacts } from "../controllers/messsage.controller.js";
+import { getAllContacts } from "../controllers/message.controller.js";
 import { protectRoute } from "../middleware/auth.middleware.js";
-import { getChatPartners } from "../controllers/messsage.controller.js";
-import { getMessagesByUserId } from "../controllers/messsage.controller.js";
-import { sendMessage } from "../controllers/messsage.controller.js";
+import { getChatPartners } from "../controllers/message.controller.js";
+import { getMessagesByUserId } from "../controllers/message.controller.js";
+import { sendMessage } from "../controllers/message.controller.js";
 import { arcjetProtection } from "../middleware/arcjet.middleware.js";
 
 const router = express.Router();
