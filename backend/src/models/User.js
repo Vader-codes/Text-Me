@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      minLength: 6,
+      minlength: 6,
     },
     profilePic: {
       type: String,
@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }, // createdAt & updatedAt
 );
+
 const User = mongoose.model("User", userSchema);
 
 export default User;

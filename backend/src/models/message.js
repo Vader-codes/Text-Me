@@ -1,8 +1,7 @@
-import { mongoose } from "mongoose";
+import mongoose from "mongoose";
 
 const messageSchema = new mongoose.Schema(
   {
-    // what we could have in a message
     senderId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
@@ -13,11 +12,10 @@ const messageSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-
     text: {
       type: String,
       trim: true,
-      mexlength: 2000,
+      maxlength: 2000,
     },
     image: {
       type: String,
@@ -25,6 +23,7 @@ const messageSchema = new mongoose.Schema(
   },
   { timestamps: true },
 );
+
 const Message = mongoose.model("Message", messageSchema);
 
 export default Message;
